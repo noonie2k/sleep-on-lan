@@ -1,10 +1,23 @@
 Sleep On LAN
 ============
 
+Description
+-----------
+
+Sleep On LAN is a ruby script which is run as a Linux "upstart" job and will shutdown the host machine when it hears a "WOL Magic Packet"
+
 Pre-Requisites
 --------------
 
+I am running this job on an Ubuntu 11.10 system and cannot verify that it functions correctly on non-Debian based systems.
+
 ### RVM
+
+As this script is run as an upstart job and requires access to root commands (i.e. shutdown) I run it as root.
+
+Therefore the ruby environment should be installed as root.
+
+If RVM is not being used then follow the relevant root installation instructions for Ruby and RubyGems and disregard those instructions below.
 
 ```bash
 sudo su root
@@ -38,4 +51,5 @@ Usage
 -----
 
 A standard WOL "Magic Packet" can be sent to an "awake" system on port 9 with this job running; at which point the system will be shutdown immediately.
+
 The code will check for a valid magic packet for the current system.
