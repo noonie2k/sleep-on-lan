@@ -11,13 +11,11 @@ Pre-Requisites
 
 I am running this job on an Ubuntu 11.10 system and cannot verify that it functions correctly on non-Debian based systems.
 
-### RVM
-
-As this script is run as an upstart job and requires access to root commands (i.e. shutdown) I run it as root.
-
-Therefore the ruby environment should be installed as root.
+As this script is run as an upstart job and requires access to root commands (i.e. shutdown) I run it as root. Therefore the ruby environment should be installed as root.
 
 If RVM is not being used then follow the relevant root installation instructions for Ruby and RubyGems and disregard those instructions below.
+
+### RVM
 
 ```bash
 sudo su root
